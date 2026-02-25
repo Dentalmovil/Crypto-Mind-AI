@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CryptoMind AI - Laboratorio</title>
+    <title>CryptoMind AI - Ultra Core</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/brain.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="scanline"></div>
     <div class="ai-container">
         <header>
-            <h1>CRYPTOMIND <span class="ai-tag">AI CORE</span></h1>
+            <h1>CRYPTOMIND <span class="ai-tag">ULTRA CORE</span></h1>
             <div class="stats-bar">
                 <div class="stat-item">PRECISIÓN: <span id="accuracy-pct">0%</span></div>
                 <div class="stat-item">ACIERTOS: <span id="total-hits">0</span></div>
@@ -20,15 +19,20 @@
         </header>
 
         <section class="monitor">
-            <div class="prediction-box">
+            <div id="auto-summary" class="hidden">
+                <p>--- RESUMEN DE ESCANEO ---</p>
+                <div id="summary-list"></div>
+            </div>
+            
+            <div id="single-display" class="prediction-box">
                 <p>IA TENDENCIA PREDICHA:</p>
                 <h2 id="ai-prediction">IDLE</h2>
             </div>
             
             <div class="sentiment-area">
-                <p>SENTIMIENTO DEL MERCADO:</p>
+                <p>PSICOLOGÍA DEL MERCADO:</p>
                 <div id="sentiment-meter">
-                    <span id="sentiment-value">--</span> | <span id="sentiment-label">ESPERANDO</span>
+                    <span id="sentiment-value">--</span> | <span id="sentiment-label">READY</span>
                 </div>
             </div>
         </section>
@@ -38,18 +42,21 @@
                 <select id="cryptoTarget">
                     <option value="bitcoin">BITCOIN (BTC)</option>
                     <option value="ethereum">ETHEREUM (ETH)</option>
+                    <option value="ripple">XRP (RIPPLE)</option>
                     <option value="solana">SOLANA (SOL)</option>
                     <option value="binancecoin">BNB</option>
                 </select>
-                <button id="trainBtn">EJECUTAR ENTRENAMIENTO</button>
+                <button id="trainBtn">ENTRENAR SELECCIONADA</button>
             </div>
-            <button id="resetStats" class="btn-secondary">RESETEAR CORE</button>
+            <button id="autoScanBtn" class="btn-highlight">🚀 ESCANEO AUTOMÁTICO (5 CRYPTOS)</button>
+            <button id="resetStats" class="btn-secondary">RESETEAR SISTEMA</button>
         </section>
 
         <div class="console-log">
-            <p id="log-text">> SISTEMA LISTO. INGRESE DATA...</p>
+            <p id="log-text">> TERMINAL LISTA...</p>
         </div>
     </div>
     <script src="app.js"></script>
 </body>
 </html>
+
