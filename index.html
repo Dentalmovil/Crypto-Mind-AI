@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoMind AI - Laboratorio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/brain.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="scanline"></div>
+    <div class="ai-container">
+        <header>
+            <h1>CRYPTOMIND <span class="ai-tag">AI CORE</span></h1>
+            <div class="stats-bar">
+                <div class="stat-item">PRECISIÓN: <span id="accuracy-pct">0%</span></div>
+                <div class="stat-item">ACIERTOS: <span id="total-hits">0</span></div>
+            </div>
+        </header>
+
+        <section class="monitor">
+            <div class="prediction-box">
+                <p>IA TENDENCIA PREDICHA:</p>
+                <h2 id="ai-prediction">IDLE</h2>
+            </div>
+            
+            <div class="sentiment-area">
+                <p>SENTIMIENTO DEL MERCADO:</p>
+                <div id="sentiment-meter">
+                    <span id="sentiment-value">--</span> | <span id="sentiment-label">ESPERANDO</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="controls">
+            <div class="input-group">
+                <select id="cryptoTarget">
+                    <option value="bitcoin">BITCOIN (BTC)</option>
+                    <option value="ethereum">ETHEREUM (ETH)</option>
+                    <option value="solana">SOLANA (SOL)</option>
+                    <option value="binancecoin">BNB</option>
+                </select>
+                <button id="trainBtn">EJECUTAR ENTRENAMIENTO</button>
+            </div>
+            <button id="resetStats" class="btn-secondary">RESETEAR CORE</button>
+        </section>
+
+        <div class="console-log">
+            <p id="log-text">> SISTEMA LISTO. INGRESE DATA...</p>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
