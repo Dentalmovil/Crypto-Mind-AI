@@ -19,6 +19,10 @@ A diferencia de los indicadores tradicionales, este core utiliza **Machine Learn
 2. Abre `index.html`.
 3. Selecciona una moneda y presiona **EJECUTAR ENTRENAMIENTO**.
 
+https://www.binance.com/referral/earn-together/refer2earn-usdc/claim?hl=es-LA&ref=GRO_28502_VU9YR&utm_source=default
+
+GRO_28502_VU9YR
+
 ---
 *Aviso: Este proyecto es experimental y con fines educativos en Ciencia de Datos.*
 
