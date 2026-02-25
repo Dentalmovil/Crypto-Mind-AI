@@ -3,60 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CryptoMind AI - Ultra Core</title>
+    <title>CryptoMind AI - HyperCore</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/brain.js"></script>
 </head>
 <body>
+    <div class="grid-overlay"></div>
     <div class="scanline"></div>
+    
     <div class="ai-container">
         <header>
-            <h1>CRYPTOMIND <span class="ai-tag">ULTRA CORE</span></h1>
+            <div class="glitch-wrapper">
+                <h1 class="glitch" data-text="CRYPTOMIND AI">CRYPTOMIND AI</h1>
+            </div>
             <div class="stats-bar">
-                <div class="stat-item">PRECISIÓN: <span id="accuracy-pct">0%</span></div>
-                <div class="stat-item">ACIERTOS: <span id="total-hits">0</span></div>
+                <div class="stat-box">
+                    <span class="label">ACCURACY</span>
+                    <span id="accuracy-pct" class="value">0%</span>
+                </div>
+                <div class="stat-box">
+                    <span class="label">HITS</span>
+                    <span id="total-hits" class="value">0</span>
+                </div>
             </div>
         </header>
 
-        <section class="monitor">
-            <div id="auto-summary" class="hidden">
-                <p>--- RESUMEN DE ESCANEO ---</p>
+        <main class="monitor-screen">
+            <div id="risk-alert" class="risk-banner hidden">
+                ⚠️ DETECTADA VOLATILIDAD EXTREMA - PROCEDER CON CAUTELA
+            </div>
+
+            <div id="auto-summary" class="summary-view hidden">
+                <div class="view-header">MARKET SCAN REPORT</div>
                 <div id="summary-list"></div>
             </div>
             
-            <div id="single-display" class="prediction-box">
-                <p>IA TENDENCIA PREDICHA:</p>
-                <h2 id="ai-prediction">IDLE</h2>
-            </div>
-            
-            <div class="sentiment-area">
-                <p>PSICOLOGÍA DEL MERCADO:</p>
-                <div id="sentiment-meter">
-                    <span id="sentiment-value">--</span> | <span id="sentiment-label">READY</span>
+            <div id="single-display" class="prediction-view">
+                <div class="hex-container">
+                    <p class="sub-label">PREDICCIÓN DEL NÚCLEO</p>
+                    <h2 id="ai-prediction">STANDBY</h2>
                 </div>
             </div>
-        </section>
-
-        <section class="controls">
-            <div class="input-group">
-                <select id="cryptoTarget">
-                    <option value="bitcoin">BITCOIN (BTC)</option>
-                    <option value="ethereum">ETHEREUM (ETH)</option>
-                    <option value="ripple">XRP (RIPPLE)</option>
-                    <option value="solana">SOLANA (SOL)</option>
-                    <option value="binancecoin">BNB</option>
-                </select>
-                <button id="trainBtn">ENTRENAR SELECCIONADA</button>
+            
+            <div class="sentiment-module">
+                <div class="module-title">PSICOLOGÍA DE RED</div>
+                <div class="meter-bar">
+                    <div id="sentiment-fill" class="fill"></div>
+                </div>
+                <div class="meter-text">
+                    <span id="sentiment-value">--</span> / 100 | <span id="sentiment-label">ANALIZANDO</span>
+                </div>
             </div>
-            <button id="autoScanBtn" class="btn-highlight">🚀 ESCANEO AUTOMÁTICO (5 CRYPTOS)</button>
-            <button id="resetStats" class="btn-secondary">RESETEAR SISTEMA</button>
-        </section>
+        </main>
 
-        <div class="console-log">
-            <p id="log-text">> TERMINAL LISTA...</p>
+        <footer class="controls-panel">
+            <div class="selector-wrapper">
+                <select id="cryptoTarget">
+                    <optgroup label="Core Assets">
+                        <option value="bitcoin" selected>BITCOIN (BTC)</option>
+                        <option value="ethereum">ETHEREUM (ETH)</option>
+                        <option value="ripple">XRP (RIPPLE)</option>
+                    </optgroup>
+                    <optgroup label="Altcoins & Memes">
+                        <option value="dogecoin">DOGE (DOGE)</option>
+                        <option value="pepe">PEPE (PEPE)</option>
+                        <option value="solana">SOLANA (SOL)</option>
+                        <option value="cardano">CARDANO (ADA)</option>
+                        <option value="litecoin">LITECOIN (LTC)</option>
+                        <option value="chainlink">LINK (CHAINLINK)</option>
+                    </optgroup>
+                    <optgroup label="Stable & Gold">
+                        <option value="pax-gold">PAXG (GOLD)</option>
+                        <option value="usd-coin">USDC (STABLE)</option>
+                        <option value="tether">USDT (TETHER)</option>
+                    </optgroup>
+                </select>
+                <button id="trainBtn" class="btn-main">ANALIZAR ACTIVO</button>
+            </div>
+            <button id="autoScanBtn" class="btn-scan">EJECUTAR ESCANEO GLOBAL</button>
+            <button id="resetStats" class="btn-reset">RESET CORE</button>
+        </footer>
+
+        <div class="console">
+            <span class="cursor">></span> <span id="log-text">SISTEMA INICIADO...</span>
         </div>
     </div>
     <script src="app.js"></script>
 </body>
 </html>
+
 
